@@ -51,8 +51,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstrack\IAboutDal.cs" />
     <Compile Include="Abstrack\ICategoryDal.cs" />
+    <Compile Include="Abstrack\IContactDal.cs" />
+    <Compile Include="Abstrack\IContentDal.cs" />
+    <Compile Include="Abstrack\IHeadingDal.cs" />
+    <Compile Include="Abstrack\IRepository.cs" />
+    <Compile Include="Abstrack\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
+    <Compile Include="Concrete\Repositories\CategoryRepository.cs" />
+    <Compile Include="Concrete\Repositories\GenericRepository.cs" />
+    <Compile Include="Concrete\Repositories\WriterRepository.cs" />
     <Compile Include="Migrations\202208262130221_mig1.cs" />
     <Compile Include="Migrations\202208262130221_mig1.designer.cs">
       <DependentUpon>202208262130221_mig1.cs</DependentUpon>

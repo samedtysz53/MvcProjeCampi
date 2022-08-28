@@ -7,10 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Abstrack
 {
-    public interface ICategoryDal:IRepository<Category>
+    internal interface IAboutDal:IRepository<About>
     {
-
-        
-      
     }
 }
