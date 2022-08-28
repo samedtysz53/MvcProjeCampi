@@ -10,27 +10,48 @@
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
 </head>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
 <body>
- <h3>Mvc Kamp Tablo örneği - Kategori</h3>
-    <table border="1">
+    <h3>Mvc Kamp Tablo örneği - Kategori</h3>
+    <table class="table table-bordered">
         <tr>
-           <th>ID</th>
-           <th>Kategori Adı</th>
-           <th>Açıklama</th>
-           <th>Durum</th>
+            <th>ID</th>
+            <th>Kategori Adı</th>
+            <th>Açıklama</th>
+            <th>Durum</th>
+            <th>Güncelle</th>
         </tr>
         <tr>
             <td>1</td>
             <td>Eğitim</td>
             <td>Açıklama yaptık</td>
             <td>true</td>
+            <td><button class="btn btn-success">Güncelle</button></td>
         </tr>
         <tr>
             <td>2</td>
             <td>Spor</td>
             <td>Açıklama yapıldı</td>
             <td>true</td>
+            <td><button class="btn btn-success">Güncelle</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Kitap</td>
+            <td>Açıklama yapıldı</td>
+            <td>true</td>
+            <td><button class="btn btn-success">Güncelle</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Sinema</td>
+            <td>Açıklama bekleniyor</td>
+            <td>true</td>
+            <td><button class="btn btn-success">Güncelle</button></td>
         </tr>
     </table>
+    <button class="btn btn-info">Yeni kategori</button>
+    <button class="btn btn-warning">kategori Listesi</button>
+    <button class="btn btn-danger">kategori açıklamaları</button>
 </body>
 </html>
