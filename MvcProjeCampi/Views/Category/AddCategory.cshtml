@@ -1,4 +1,8 @@
 ﻿
+
+@model EntityLayer.Concrete.Category
+
+
 @{
     Layout = null;
 }
@@ -11,16 +15,39 @@
     <h1>Yeni kategori ekleme sayfası</h1>
     <meta name="viewport" content="width=device-width" />
     <title>AddCategory</title>
+    
 </head>
 <body>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />    
     <h3>Hoş geldiniz</h3>
-    <form class="form-group" method="post">
-        <input type="text" placeholder="Kategori adı" name="CategoryName" class="form-control" />
-        <br />
-        <input type="text" placeholder="Açıklama" name="CategoryDescription"  class="form-control" />
-        <br />
-        <button class="btn btn-primary" formmethod="post">Ekle</button>
+    @using (Html.BeginForm("AddCategory", "Category", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.Label("Kategori adı")"
+            @Html.TextBoxFor(x => x.CategoryName)
+            @Html.ValidationMessageFor(x => x.CategoryName)
+            <br />
+            @Html.Label("Açıklama")
+            @Html.TextBoxFor(x => x.CategoryDescription)
+            @Html.ValidationMessageFor(x => x.CategoryDescription)
+            <br />
 
-    </form>
+            <br />
+            @Html.Label("Durum")<br />@Html.Label("True") @Html.RadioButtonFor(x => x.CategoryStatus, true, new { id = "iade-evet", @class = "md-radiobtn" })
+             @Html.Label("False") @Html.RadioButtonFor(x => x.CategoryStatus, false, new { id = "iade-evet", @class = "md-radiobtn" })
+            <br />
+            <br />
+            <button class="btn btn-danger">Kaydet</button>
+
+        </div>
+    }
+    @*<form class="form-group" method="post">
+            <input type="text" placeholder="Kategori adı" name="CategoryName" class="form-control" />
+            <br />
+            <input type="text" placeholder="Açıklama" name="CategoryDescription"  class="form-control" />
+            <br />
+            <button class="btn btn-primary" formmethod="post">Ekle</button>
+
+        </form>*@
 </body>
 </html>
