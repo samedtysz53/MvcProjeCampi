@@ -18,14 +18,15 @@ namespace BusinessLayer.Concrete
         }
         public void CategoryAddB(Category p) 
         {
-            if (p.CategoryName==""||p.CategoryName.Length<=3||p.CategoryDescription==""||p.CategoryStatus==false|| p.CategoryName.Length>=51) 
-            {
-                //hata mesajı
-            }
-            else 
-            {
-                rep.Insert(p);
-            }
+            rep.Insert(p);
+
+            //if (p.CategoryName==""||p.CategoryName.Length<=3||p.CategoryDescription==""||p.CategoryStatus==false|| p.CategoryName.Length>=51) 
+            //{
+            //    //hata mesajı
+            //}
+            //else 
+            //{
+            //}
         }
     }
 }
