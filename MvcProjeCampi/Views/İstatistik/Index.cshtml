@@ -1,0 +1,47 @@
+﻿@using EntityLayer.Concrete
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<div class="card text-body mb-4 bg-secondary" style="height:50px; width:100%; margin:auto; text-align:center;line-height:50px">İstatislik</div>
+<div class="card-deck" style="width:75%;  margin: auto;">
+    <div class="card bg-danger w-25 text-white  text-center" style="height:50px;">
+
+        <h5 class="card-title">Toplam kategori sayısı</h5>
+
+        <h6 class="card-text"> @ViewBag.CategoryCount</h6>
+
+    </div>
+    <div class="card bg-success w-25 text-white  text-center" style="height:50px;">
+
+        <h5 class="card-title">Yazılım Kategorisi Başlık Sayısı</h5>
+
+        <h6 class="card-text"> @ViewBag.Heading</h6>
+
+    </div>
+    <div class="card bg-primary w-25 text-white  text-center" style="height:50px;">
+
+        <h5 class="card-title">Adında a harfi geçen yazar sayısı</h5>
+
+        <h6 class="card-text text-white"> @ViewBag.Writer</h6>
+
+    </div>
+    </div><br />
+          <div class="card-deck" style="width:75%;  margin: auto;">
+              <div class="card bg-yellow w-25 text-white  text-center" style="height:80px;">
+
+                  <h5 class="card-title">En Fazla Başlığı Olan Kategori Adı</h5>
+
+                  <h6 class="card-text text-white"> @ViewBag.HeadingMax</h6>
+
+              </div>
+              <div class="card bg-yellow w-25 text-white  text-center" style="height:80px;">
+
+                  <h5 class="card-title">Kategori tablosunda durumu true olan kategoriler ile false olan kategoriler arasındaki sayısal fark</h5>
+
+                  <h6 class="card-text text-white"> @ViewBag.StatusFark</h6>
+
+              </div>
+          </div>

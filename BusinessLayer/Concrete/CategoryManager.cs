@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace BusinessLayer.Concrete
 {
@@ -27,6 +28,16 @@ namespace BusinessLayer.Concrete
         public void CategoryDelete(Category category)
         {
             _categoryDal.Delete(category);
+        }
+
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDal.Update(category);
+        }
+
+        public void CategoryVlist(Category category)
+        {
+            _categoryDal.List();
         }
 
         public Category GetById(int id)
